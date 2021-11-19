@@ -1,0 +1,85 @@
+
+<div class="toolbar" >
+  <div fxLayout = "column">
+    <div fxFlex>
+      <div fxLayout style="height: 84px;">
+        <div fxFlex=50 fxFlexOffset=5 style="margin: auto;">
+          <h1><b>CLEVER ISSUE TRACKER </b></h1>
+         </div>
+
+
+         <div fxFlex=35>
+           <div fxLayout>
+             <div>
+            <ul role="list" fxLayout fxLayoutAlign="end">
+              <mat-list-item style="color: aquamarine;" role="listitem" >
+                <button mat-button routerLinkActive="activeLink" routerLink="task-management">Home
+                </button>
+              </mat-list-item>
+            </ul>
+           </div>
+
+            <div>
+           <ul role="list" fxLayout fxLayoutAlign="end">
+            <mat-list-item style="color: aquamarine;" role="listitem"  >
+              <button mat-button > Issues </button>
+            </mat-list-item>
+          </ul>
+         </div>
+
+         <div>
+          <ul role="list" fxLayout fxLayoutAlign="end">
+           <mat-list-item style=" color: aquamarine;" role="listitem" >
+             <button mat-button routerLinkActive="activeLink">About
+             </button>
+           </mat-list-item>
+         </ul>
+        </div>
+
+        <div>
+          <ul role="list" fxLayout fxLayoutAlign="end">
+           <mat-list-item style="margin-right: 20px; color: aquamarine;" role="listitem" [matMenuTriggerFor]="accountMenu" >
+             <button mat-button routerLinkActive="activeLink">
+               <mat-icon >manage_accounts</mat-icon>
+             </button>
+           </mat-list-item>
+         </ul>
+        </div>
+
+
+           </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<mat-menu fxLayout #accountMenu="matMenu" yPosition="below">
+<mat-card  class="example-card" >
+
+  <mat-card-content >
+    <div style=" display: flex; justify-content: center; " class="container">
+      <div
+      *ngIf="imagePath;
+      else elseImagePath">
+        <img mat-card-image class="profile-image"  style=" border-radius: 50%;  margin-top: 30px;" [src]="imagePath" alt="">
+      </div>
+
+      <input  #photoInput hidden type="file" accept="image/*" (change)="imagePreview($event)" >
+      <mat-icon matTooltip="Upload New Profile Picture"  (click)="photoInput.click()">photo_camera</mat-icon>
+
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color ="warn" class="btns active-route">Change</button>
+    <button mat-raised-button  color ="primary" class="btns active-route" routerLink="/auth/login">Logout</button>
+  </mat-card-actions>
+</mat-card>
+
+</mat-menu>
+
+<ng-template #elseImagePath >
+<img mat-card-image  style=" height: 50px; width: 50px; border-radius: 50%;"    src="../../../assets/avatar5.png" alt="Photo of a Shiba Inu">
+</ng-template>

@@ -1,0 +1,85 @@
+<div style="text-align: center;">
+  <p>Project Information</p>
+</div>
+
+<div fxLayout="row" fxLayoutGap=40px style="padding-left: 40px; padding-right: 40px;">
+  <div fxFlex>
+      <mat-card class="example-card">
+          <mat-card-subtitle>Project 1</mat-card-subtitle>
+          <mat-card-title><h5 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Milestones Ltd</h5></mat-card-title>
+          <mat-card-content>
+              <p>This card has divider and indeterminate progress as footer</p>
+
+          </mat-card-content>
+          <mat-divider inset></mat-divider>
+          <mat-card-actions>
+              <button mat-button>Period: 6 months</button>
+              <button mat-button>Progressing</button>
+          </mat-card-actions>
+          <mat-card-footer>
+              <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+          </mat-card-footer>
+      </mat-card>
+
+  </div>
+
+  <div fxFlex>
+      <mat-card class="example-card">
+          <mat-card-subtitle>Announcement</mat-card-subtitle>
+          <mat-card-title><h5 style="font-family: serif;">2nd Meeting</h5></mat-card-title>
+          <mat-card-content>
+              <p>This card has divider and indeterminate progress as footer</p>
+
+          </mat-card-content>
+          <mat-divider inset></mat-divider>
+          <mat-card-actions>
+              <button mat-button>22nd Oct, 2021</button>
+              <button mat-button>MUST Attend</button>
+          </mat-card-actions>
+          <mat-card-footer>
+              <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+          </mat-card-footer>
+      </mat-card>
+
+  </div>
+
+  <div fxFlex>
+      <mat-card class="example-card">
+          <mat-card-subtitle>Complaints</mat-card-subtitle>
+          <mat-card-title><h5 style="font-family: serif;">Arinda Clever</h5></mat-card-title>
+          <mat-card-content>
+              <p>This card has divider and indeterminate progress as footer</p>
+
+          </mat-card-content>
+          <mat-divider inset></mat-divider>
+          <mat-card-actions>
+              <button mat-button>1 Oct, 2021</button>
+              <button mat-button>Not attended to</button>
+          </mat-card-actions>
+          <mat-card-footer>
+              <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+          </mat-card-footer>
+      </mat-card>
+
+      <div style="padding:30px;">
+        <div fxLayout="row " fxLayoutGap="30px" >
+            <div fxFlex>
+              <highcharts-chart [Highcharts]="highcharts_dornut" [options]="DornutHighcharts  ">
+
+              </highcharts-chart>
+
+
+
+            </div>
+            <div fxFlex>
+              <highcharts-chart [Highcharts]="highcharts_pie" [options]="BarHighcharts  ">
+
+              </highcharts-chart>
+
+            </div>
+          </div>
+        </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,44 @@
+
+
+
+
+    <mat-card style=" margin: auto; width: 500px; overflow-y: hidden; border-radius: 2px solid red; margin-top: 100px; ">
+      <form (submit)="login()">
+          <p style="margin-left: 20px;">Sign In to Continue</p>
+
+          <div fxLayout="column">
+              <div fxFlex style="text-align: center;">
+                  <mat-form-field appearance="outline" style="width: 400px;">
+                      <mat-label>Enter your email</mat-label>
+                      <input matInput autofocus formControlName="email">
+                      <mat-icon matSuffix>mail</mat-icon>
+                  </mat-form-field>
+              </div>
+
+              <div fxFlex style="text-align: center;">
+                  <mat-form-field appearance="outline"   style="width: 400px;">
+                      <mat-label>Enter your password</mat-label>
+                      <input matInput formControlName="password">
+                      <mat-icon matSuffix>lock</mat-icon>
+                  </mat-form-field>
+              </div>
+
+
+          <div fxFlex fxLayout >
+              <div fxFlex>
+                  <p>Don't Have an account ?
+                      <a>Create</a>
+                  </p>
+              </div>
+
+              <div fxFlex>
+                  <button mat-raised-button class="btn btn-primary-outline pull-right" type="submit" color="primary">Login </button>
+              </div>
+
+          </div>
+        </div>
+
+      </form>
+  </mat-card>
+
+

@@ -1,0 +1,16 @@
+.mat-sidenav-container{
+  height: 100vh;
+}
+
+.sidebar-sub-items{
+  color: #14110f;
+  font-style: inherit;
+}
+
+.sidebar-feel{
+  background-color: aquamarine;
+}
+
+.my-project-items{
+  background-color: #f0cdb4;
+}
